@@ -1,13 +1,13 @@
 import os
-from workout_places.build import *
+from workout.build import *
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, current_app
-from workout_places.models import *
+from workout.models import *
 
 app = Flask(__name__)  # create the application instance :)
 app.config.from_object(__name__)  # load config from this file , susp.py
 
 app.config.update(dict(
-    DATABASE=os.path.join(app.root_path, 'workout_places.db'),
+    DATABASE=os.path.join(app.root_path, 'workout.db'),
     SECRET_KEY='development key',
     USERNAME='admin',
     PASSWORD='default'
@@ -44,9 +44,9 @@ def index():
 @app.route('/add_new_place', methods=['GET', 'POST'])
 def add_new_place():
     if request.method == 'POST':
-        district = request.form['district'],
-        street = request.form['street'],
-        place = request.form['place'],
+        district = request.form['district']
+        street = request.form['street']
+        place = request.form['place']
         description = request.form['description']
 
         new_place = WorkoutPlaces.create(
@@ -57,7 +57,3 @@ def add_new_place():
         )
         return redirect(url_for('add_new_place'))
     return render_template('add_new_place.html')
-
-
-if __name__ == "__main__":
-    init_db()
