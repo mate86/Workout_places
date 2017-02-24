@@ -8,7 +8,7 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
       <user-name>mate</user-name>
-      <resolve-scope>workout_places:public,mate</resolve-scope>
+      <resolve-scope>workout_places:mate,public</resolve-scope>
     </data-source>
   </component>
 </project>
