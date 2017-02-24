@@ -32,4 +32,4 @@ class WorkoutPlaces(BaseModel):
     district = CharField()
     street = CharField()
     place = CharField()
-    desc = CharField()
+    description = CharField()
