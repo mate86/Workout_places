@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--<html lang="en">-->
+<head>
+    <meta charset="UTF-8">
+    <title>Workout places - New Place</title>
+</head>
+<body>
+    <div id="input_container">
+        <form action="/add_new_place" method="post">
+            <label>Kerület:</label>
+            <br>
+            <select class="list_input" name="district" id="district">
+                <option value="I.">I.</option>
+                <option value="II.">II.</option>
+                <option value="III.">III.</option>
+                <option value="IV.">IV.</option>
+                <option value="V.">V.</option>
+                <option value="VI.">VI.</option>
+                <option value="VII.">VII.</option>
+                <option value="VIII.">VIII.</option>
+                <option value="IX.">IX.</option>
+                <option value="X.">X.</option>
+                <option value="XI.">XI.</option>
+                <option value="XII.">XII.</option>
+                <option value="XIII.">XIII.</option>
+            </select>
+            <br>
+            <input type="text" name="street" placeholder="Utca">
+            <br>
+            <input type="text" name="place" placeholder="Hely">
+            <br>
+            <!--<input type="text" name="description" placeholder="Leírás">-->
+            <textarea name="description" placeholder="Leírás"></textarea>
+            <br>
+            <input type="submit" value="Hozzáadás">
+        </form>
+    </div>
+
+</body>
+</html>

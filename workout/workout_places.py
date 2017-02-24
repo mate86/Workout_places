@@ -1,6 +1,7 @@
 import os
 from workout_places.build import *
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, current_app
+from workout_places.models import *
 
 app = Flask(__name__)  # create the application instance :)
 app.config.from_object(__name__)  # load config from this file , susp.py
@@ -36,5 +37,27 @@ def close_db(error):
 
 
 @app.route('/')
-def main():
+def index():
     return render_template('index.html')
+
+
+@app.route('/add_new_place', methods=['GET', 'POST'])
+def add_new_place():
+    if request.method == 'POST':
+        district = request.form['district'],
+        street = request.form['street'],
+        place = request.form['place'],
+        description = request.form['description']
+
+        new_place = WorkoutPlaces.create(
+            district = district,
+            street = street,
+            place = place,
+            description = description
+        )
+        return redirect(url_for('add_new_place'))
+    return render_template('add_new_place.html')
+
+
+if __name__ == "__main__":
+    init_db()

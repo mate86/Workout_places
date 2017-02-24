@@ -29,7 +29,7 @@ class BaseModel(Model):
 
 
 class WorkoutPlaces(BaseModel):
-    district = IntegerField()
+    district = CharField()
     street = CharField()
     place = CharField()
-    description = CharField()
+    desc = CharField()
