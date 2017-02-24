@@ -1,5 +1,5 @@
 # This script can create the database tables based on your models
-from workout_places.models import *
+from workout.models import *
 
 
 class TableCreate():
