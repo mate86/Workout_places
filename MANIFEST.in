@@ -1,0 +1,5 @@
+graft workout_places/templates
+graft workout_places/static
+include workout_places/build.py
+include workout_places/models.py
+include workout_places/workout_places.py
