@@ -30,6 +30,6 @@ class BaseModel(Model):
 
 class WorkoutPlaces(BaseModel):
     district = CharField()
-    street = CharField()
+    address = CharField()
     place = CharField()
     description = CharField()
