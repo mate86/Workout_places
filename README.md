@@ -13,7 +13,7 @@ The application uses flask as a webframework and peewee as an ORM.
 
 5. If it runs without error (means: no red text), run these:
 
-`export FLASK_APP=workout_places`
+`export FLASK_APP=workout`
 
 `export FLASK_DEBUG=true`
 
