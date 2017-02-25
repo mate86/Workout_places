@@ -45,13 +45,13 @@ def index():
 def add_new_place():
     if request.method == 'POST':
         district = request.form['district']
-        street = request.form['street']
+        address = request.form['address']
         place = request.form['place']
         description = request.form['description']
 
         new_place = WorkoutPlaces.create(
             district = district,
-            street = street,
+            address = address,
             place = place,
             description = description
         )
