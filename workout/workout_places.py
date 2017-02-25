@@ -57,3 +57,8 @@ def add_new_place():
         )
         return redirect(url_for('add_new_place'))
     return render_template('add_new_place.html')
+
+@app.route('/finding_place')
+def finding_place():
+    places = WorkoutPlaces.select()
+    return render_template('finding_place.html', places=places)
