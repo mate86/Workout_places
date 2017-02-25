@@ -10,14 +10,14 @@
             <table>
                 <tr>
                     <th>Kerület</th>
-                    <th>Utca</th>
+                    <th>Cím</th>
                     <th>Hely</th>
                     <th>Leírás</th>
                 </tr>
                 {% for place in places %}
                 <tr>
                     <td>{{ place.district }}</td>
-                    <td>{{ place.street }}</td>
+                    <td>{{ place.address }}</td>
                     <td>{{ place.place }}</td>
                     <td>{{ place.description }}</td>
                 </tr>
