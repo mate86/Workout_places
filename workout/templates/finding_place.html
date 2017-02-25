@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Workout places - Finding Place</title>
+</head>
+<body>
+    <div id="listing_container">
+        <form action="/finding_place">
+            <table>
+                <tr>
+                    <th>Kerület</th>
+                    <th>Utca</th>
+                    <th>Hely</th>
+                    <th>Leírás</th>
+                </tr>
+                {% for place in places %}
+                <tr>
+                    <td>{{ place.district }}</td>
+                    <td>{{ place.street }}</td>
+                    <td>{{ place.place }}</td>
+                    <td>{{ place.description }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            <!--<input type="submit" value="Keres">-->
+        </form>
+    </div>
+</body>
+</html>
